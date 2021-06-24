@@ -138,7 +138,7 @@ void UdpServer::run()
 
     // Open the adapter
     if ((adhandle= pcap_open_live(d->name,  // name of the device
-                                  m_port,    // portion of the packet to capture.
+                                  65535,    // portion of the packet to capture.
                                   // 65536 grants that the whole packet will be captured on all the MACs.
                                   1,        // promiscuous mode (nonzero means promiscuous)
                                   1000,     // read timeout
